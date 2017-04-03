@@ -5,13 +5,13 @@ class Buyer_controller extends CI_Controller {
 	function __construct(){
 		parent::__construct();
 
-		if($this->session->userdata('level') != "Buyer"){
+		if($this->session->userdata('level') != "Seller"){
 		redirect("user_controller");
 		}
 	}
 
 	public function index(){
-		$this->load->view('Buyer/login');
+		$this->load->view('seller/insert');
 	}
 
 } ?>

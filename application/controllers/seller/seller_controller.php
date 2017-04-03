@@ -11,7 +11,7 @@ class Seller_controller extends CI_Controller {
 	}
 
 	public function index(){
-		$this->load->view('seller/login');
+		$this->load->view('seller/insert');
 	}
 
 	public function new_poster(){
@@ -46,9 +46,10 @@ class Seller_controller extends CI_Controller {
 					'description' => $description,
 					'date_in' => $date_in,
 					'picture' => $pict['file_name'] 
-				);
+					);
 
 				$this->seller_model->create_poster('poster',$data);
+			
 			}
 			else{
 				$error = array('error' => $this->upload->display_errors());
